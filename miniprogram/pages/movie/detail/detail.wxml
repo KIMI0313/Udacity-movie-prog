@@ -1,0 +1,20 @@
+<!--miniprogram/pages/movie/detail/detail.wxml-->
+<view wx:if="{{showLogin}}">
+	<login bindonLogin="onTapLogin"></login>
+</view>
+<view wx:else class="container">
+	<view class="body">
+		<view class="cover">
+			<image mode="aspectFill" src="{{movie.image}}"></image>
+		</view>
+		<view class="title">{{ movie.title }}</view>
+		<view class="description">{{ movie.description }}</view>
+		<view class="action">
+			<button wx:if="{{ !hasComment }}" class="weui-btn" bindtap="handleAdd">添加影评</button>
+			<button wx:else class="weui-btn" bindtap="handleComment">我的影评</button>
+			<button class="weui-btn" bindtap="handleView">查看影评</button>
+		</view>
+	</view>
+	<mp-actionSheet bindactiontap="btnClick" show="{{showActionsheet}}" actions="{{groups}}">
+	</mp-actionSheet>
+</view>

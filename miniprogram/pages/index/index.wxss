@@ -1,0 +1,22 @@
+/**index.wxss**/
+.recommandation {
+  text-align: center;
+  padding: 28rpx 0;
+  background: #fff;
+}
+
+.cover image {
+  height: 600rpx;
+  width: 450rpx;
+}
+
+.detail image {
+  width: 100rpx;
+  height: 100rpx;
+}
+
+.detail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
